@@ -12,7 +12,7 @@ function App() {
     if (message.trim() === '') return;
 
     setLoading(true);
-    const response = await fetch('http://localhost:5001/chat', {
+    const response = await fetch('https://ai-chatbot-backend-gaa4.onrender.com/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ conversation_id: conversationId, message }),
