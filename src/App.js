@@ -63,7 +63,7 @@ function App() {
         />
         
         <Button
-      
+         style={{ marginTop: '10px' }}
           variant="contained"
           color="primary"
           onClick={handleSendMessage}
