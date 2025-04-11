@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  padding-top: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.paper {
+  padding: 2rem;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+.chatBox {
+  height: 60vh;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.chatMessage {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 1rem;
+}
+
+.chatMessage.ai {
+  flex-direction: row;
+}
+
+.chatMessage.user {
+  flex-direction: row-reverse;
+}
+
+.messageBox {
+  max-width: 70%;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatMessage.user .messageBox {
+  background-color: #3f51b5;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.textField {
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sendButton {
+  padding: 6px 12px;
+  font-size: 14px;
+  min-width: 120px;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.sendButton:disabled {
+  background-color: #b0bec5;
+}
+
+/* Loader styling */
+.loading {
+  margin: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .paper {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sendButton {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .header {
+    font-size: 1.5rem;
   }
 }
